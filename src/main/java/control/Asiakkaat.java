@@ -38,6 +38,7 @@ public class Asiakkaat extends HttpServlet {
 		// TODO Auto-generated method stub
 		System.out.println("Asiakkaat.doGet()");
 		response.getWriter().append("Served at: ").append(request.getContextPath());
+		String hakusana = pathInfo.replace("/", "");
 		Dao dao = new Dao();
 		ArrayList<Asiakas> asiakkaat = dao.listaaKaikki();
 		System.out.println(asiakkaat);
